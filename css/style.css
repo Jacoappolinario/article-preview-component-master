@@ -112,17 +112,6 @@ p {
 }
 
 .article-social-share-buttons {
-  display: none;
-  position: absolute;
-  top: 129px;
-  right: -68px;
-}
-
-.article-social-share-buttons.active {
-  display: block;
-}
-
-.social-share-buttons-content {
   width: 248px;
   height: 55px;
   box-sizing: border-box;
@@ -131,14 +120,16 @@ p {
   border-radius: 0.625rem;
   cursor: pointer;
 
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1.313rem;
 
-  position: relative;
+  position: absolute;
+  top: 129px;
+  right: -68px;
 }
 
-.social-share-buttons-content::after {
+.article-social-share-buttons::after {
   content: "";
   display: block;
   width: 19px;
@@ -149,6 +140,10 @@ p {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.article-social-share-buttons.active {
+  display: flex;
 }
 
 .social-share-buttons-title {
