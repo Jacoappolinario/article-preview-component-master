@@ -130,7 +130,6 @@ p {
   padding: 1.125rem 2.25rem;
   background-color: var(--color-1);
   border-radius: 0.625rem;
-  cursor: pointer;
 
   display: none;
   align-items: center;
@@ -171,4 +170,5 @@ p {
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 }
