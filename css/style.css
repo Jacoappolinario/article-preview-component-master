@@ -126,7 +126,7 @@ p {
   width: 248px;
   height: 55px;
   box-sizing: border-box;
-  padding: 1.125rem 2.313rem;
+  padding: 1.125rem 2.25rem;
   background-color: #48556a;
   border-radius: 0.625rem;
   cursor: pointer;
@@ -141,8 +141,8 @@ p {
 .social-share-buttons-content::after {
   content: "";
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 19px;
+  height: 19px;
   background-color: #48556a;
 
   position: absolute;
