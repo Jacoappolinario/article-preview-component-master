@@ -1,7 +1,17 @@
+:root {
+  --font-family: "Manrope", sans-serif;
+
+  --color-0: #ffffff;
+  --color-1: #48556a;
+  --color-2: #6e8098;
+  --color-3: #9daec2;
+  --color-4: #ecf2f8;
+}
+
 body {
   margin: 0px;
-  font-family: "Manrope", sans-serif;
-  background: #ecf2f8;
+  font-family: var(--font-family);
+  background: var(--color-4);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -36,7 +46,7 @@ p {
 }
 
 .article-content {
-  background: #ffffff;
+  background: var(--color-0);
   padding: 2rem 2.5rem;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -47,7 +57,7 @@ p {
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.016rem;
-  color: #48556a;
+  color: var(--color-1);
   margin-bottom: 0.75rem;
 }
 
@@ -56,7 +66,7 @@ p {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.008rem;
-  color: #6e8098;
+  color: var(--color-2);
   margin-bottom: 1.25rem;
 }
 
@@ -87,12 +97,12 @@ p {
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.008rem;
-  color: #48556a;
+  color: var(--color-1);
 }
 
 .publish-date {
   font-weight: 500;
-  color: #9daec2;
+  color: var(--color-3);
 }
 
 .share-button {
@@ -102,15 +112,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ecf2f8;
+  background: var(--color-4);
 }
 
 .share-button.active {
-  background: #6e8098;
+  background: var(--color-2);
 }
 
 .share-button.active svg path {
-  fill: #ffffff;
+  fill: var(--color-0);
 }
 
 .article-social-share-buttons {
@@ -118,7 +128,7 @@ p {
   height: 55px;
   box-sizing: border-box;
   padding: 1.125rem 2.25rem;
-  background-color: #48556a;
+  background-color: var(--color-1);
   border-radius: 0.625rem;
   cursor: pointer;
 
@@ -136,7 +146,7 @@ p {
   display: block;
   width: 19px;
   height: 19px;
-  background-color: #48556a;
+  background-color: var(--color-1);
 
   position: absolute;
   bottom: 0;
@@ -154,7 +164,7 @@ p {
   line-height: 1.53;
   letter-spacing: 0.313rem;
   text-transform: uppercase;
-  color: #9daec2;
+  color: var(--color-3);
 }
 
 .social-share-buttons-links {
