@@ -23,16 +23,21 @@ p {
   max-width: 730px;
   height: 280px;
   box-sizing: border-box;
-
   display: grid;
   grid-template-columns: auto 1fr;
+
+  position: relative;
+}
+
+.article-image {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .article-content {
   background: #ffffff;
   padding: 2rem 2.5rem;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .article-title {
@@ -92,9 +97,71 @@ p {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
   background: #ecf2f8;
+}
+
+.share-button.active {
+  background: #6e8098;
+}
+
+.share-button.active svg path {
+  fill: #ffffff;
+}
+
+.article-social-share-buttons {
+  display: none;
+  position: absolute;
+  top: 129px;
+  right: -68px;
+}
+
+.article-social-share-buttons.active {
+  display: block;
+}
+
+.social-share-buttons-content {
+  width: 248px;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 1.125rem 2.313rem;
+  background-color: #48556a;
+  border-radius: 0.625rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 1.313rem;
+
+  position: relative;
+}
+
+.social-share-buttons-content::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #48556a;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.social-share-buttons-title {
+  font-size: 0.813rem;
+  font-weight: 700;
+  line-height: 1.53;
+  letter-spacing: 0.313rem;
+  text-transform: uppercase;
+  color: #9daec2;
+}
+
+.social-share-buttons-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
