@@ -29,7 +29,13 @@ p {
   margin: 0px;
 }
 
-.article-preview {
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.article-preview-container {
   width: 730px;
   height: 280px;
   box-sizing: border-box;
@@ -40,27 +46,32 @@ p {
   position: relative;
 }
 
-.article-image {
+.preview-image {
   overflow: hidden;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-.article-content {
+.preview-image img {
+  width: 285px;
+  height: 280px;
+}
+
+.preview-content {
   background: var(--color-0);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   display: grid;
 }
 
-.article-info {
+.preview-info {
   padding-top: 2rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-bottom: 1.25rem;
 }
 
-.article-title {
+.preview-title {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.4;
@@ -69,7 +80,7 @@ p {
   margin-bottom: 0.75rem;
 }
 
-.article-description {
+.preview-description {
   font-size: 0.813rem;
   font-weight: 500;
   line-height: 1.53;
@@ -77,7 +88,7 @@ p {
   color: var(--color-2);
 }
 
-.article-footer {
+.preview-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -86,13 +97,15 @@ p {
   padding-bottom: 2rem;
 }
 
-.author-info {
+.author-details-container {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
 .author-avatar img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -115,7 +128,7 @@ p {
   color: var(--color-3);
 }
 
-.share-button {
+.social-share-button {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -125,15 +138,15 @@ p {
   background: var(--color-4);
 }
 
-.share-button.active {
+.social-share-button.active {
   background: var(--color-2);
 }
 
-.share-button.active svg path {
+.social-share-button.active svg path {
   fill: var(--color-0);
 }
 
-.article-social-share-buttons {
+.social-share-container {
   width: 248px;
   height: 55px;
   box-sizing: border-box;
@@ -142,16 +155,16 @@ p {
   box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.5034);
   border-radius: 0.625rem;
 
-  display: none;
-  align-items: center;
-  gap: 1.313rem;
-
   position: absolute;
   top: 129px;
   right: -68px;
+
+  display: none;
+  align-items: center;
+  gap: 1.313rem;
 }
 
-.article-social-share-buttons::after {
+.social-share-container::after {
   content: "";
   display: block;
   width: 19px;
@@ -164,11 +177,11 @@ p {
   transform: translate(-50%, 50%) rotate(45deg);
 }
 
-.article-social-share-buttons.active {
+.social-share-container.active {
   display: flex;
 }
 
-.social-share-buttons-title {
+.social-share-title {
   font-size: 0.813rem;
   font-weight: 700;
   line-height: 1.53;
@@ -177,14 +190,14 @@ p {
   color: var(--color-3);
 }
 
-.social-share-buttons-links {
+.social-share-links {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
 @media (max-width: 900px) {
-  .article-preview {
+  .article-preview-container {
     width: 327px;
     height: 512px;
     grid-template-columns: 1fr;
@@ -192,42 +205,64 @@ p {
     border-radius: 10px;
   }
 
-  .article-image {
+  .preview-image {
     overflow: initial;
     border-radius: initial;
   }
 
-  .article-image img {
+  .preview-image img {
     width: 100%;
     height: 100%;
   }
 
-  .article-content {
+  .preview-content {
     border-radius: initial;
   }
 
-  .article-info {
+  .preview-info {
     padding-top: 2.25rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1.25rem;
   }
 
-  .article-title {
+  .preview-title {
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.013rem;
   }
 
-  .article-footer {
+  .preview-footer {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1.25rem;
   }
 
-  .article-footer.active {
+  .preview-footer.active {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background: var(--color-1);
+  }
+
+  .author-details-container.disabled {
+    display: none;
+  }
+
+  .social-share-container {
+    width: initial;
+    height: initial;
+    box-sizing: initial;
+    padding: initial;
+    background-color: initial;
+    box-shadow: initial;
+    border-radius: initial;
+
+    position: initial;
+    top: initial;
+    right: initial;
+  }
+
+  .social-share-container::after {
+    display: none;
   }
 }
