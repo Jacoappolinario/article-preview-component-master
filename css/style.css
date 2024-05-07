@@ -52,6 +52,11 @@ ul {
   border-bottom-left-radius: 10px;
 }
 
+.preview-image img {
+  width: 285px;
+  height: 280px;
+}
+
 .preview-content {
   background: var(--color-0);
   border-top-right-radius: 10px;
@@ -99,6 +104,8 @@ ul {
 }
 
 .author-avatar img {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
