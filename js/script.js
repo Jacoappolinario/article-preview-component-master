@@ -1,13 +1,27 @@
-const footer = document.querySelector(".preview-footer");
-const author = document.querySelector(".author-details-container");
-const socialShareContainer = document.querySelector(".social-share-container");
-const socialShareButton = document.querySelector(".social-share-button");
+// Selecting DOM elements
+const socialShareButtonElement = document.querySelector(".social-share-button");
+const footerBgElement = document.querySelector(".preview-footer-bg");
+const authorDetailsElement = document.querySelector(
+  ".author-details-container"
+);
+const socialShareContainerElement = document.querySelector(
+  ".social-share-container"
+);
 
-function activeSocialShareContainer() {
-  footer.classList.toggle("active");
-  socialShareButton.classList.toggle("active");
-  author.classList.toggle("disabled");
-  socialShareContainer.classList.toggle("active");
+// Function to switch the display of elements
+function toggleSocialShare() {
+  socialShareButtonElement.classList.toggle("active");
+  footerBgElement.classList.toggle("active");
+  authorDetailsElement.classList.toggle("disabled");
+  socialShareContainerElement.classList.toggle("active");
 }
 
-socialShareButton.addEventListener("click", activeSocialShareContainer);
+// Check that the necessary elements are present in the DOM before adding the click event to the social sharing button.
+if (
+  socialShareButtonElement &&
+  footerBgElement &&
+  authorDetailsElement &&
+  socialShareContainerElement
+) {
+  socialShareButtonElement.addEventListener("click", toggleSocialShare);
+}

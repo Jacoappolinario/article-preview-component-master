@@ -136,6 +136,7 @@ ul {
   align-items: center;
   justify-content: center;
   background: var(--color-4);
+  cursor: pointer;
 }
 
 .social-share-button.active {
@@ -229,15 +230,15 @@ ul {
     letter-spacing: 0.013rem;
   }
 
+  .preview-footer-bg.active {
+    background: var(--color-1);
+  }
+
   .preview-footer {
     height: 64px;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 0px;
-  }
-
-  .preview-footer.active {
-    background: var(--color-1);
   }
 
   .author-details-container.disabled {
