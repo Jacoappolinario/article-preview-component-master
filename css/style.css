@@ -136,6 +136,7 @@ ul {
   align-items: center;
   justify-content: center;
   background: var(--color-4);
+  border: none;
   cursor: pointer;
 }
 
@@ -145,6 +146,18 @@ ul {
 
 .social-share-button.active svg path {
   fill: var(--color-0);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 .social-share-container {
